@@ -1,0 +1,22 @@
+.confirm{background: #289a28d6;;}
+.delete{background: #dc3545;}
+.grid-list{
+  margin-top: 41px;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  .mat-date{
+    position: relative;
+    top: 92px;
+    left: -386px;
+}
+.example-width{
+  margin-left: 30px;
+}

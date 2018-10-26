@@ -1,0 +1,11 @@
+.confirm{
+    background: #289a28d6;
+    text-align: left;
+}
+.delete{background: #dc3545;}
+.mat-date{
+    position: relative;
+    top: 92px;
+    left: -386px;
+}
+

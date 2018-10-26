@@ -1,0 +1,41 @@
+.row{
+    margin-bottom: 34px;
+}
+.card-img-top{
+    width:290px;
+    height:430px;
+}
+p{margin-left: 15px;}
+h5{margin-left: 15px;}
+
+[type=button]{width: 77px;margin-left: 25px;}
+
+.edit{
+    background-color: white;
+    color: #289a28d6;
+    border: 1px solid #289a28d6;
+}
+.delete{
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    margin-left: 62px;
+}
+.col {
+    margin-left: 2%;
+    display: inline;
+}
+.mat-grid-list{
+    margin-bottom: 34px;
+    padding: 30px;
+}
+.example-card{
+    width:290px;
+    height:608px;
+}
+.mat-card-image {
+    height: 418px;
+}
+mat-card-actions{
+    display: flex;
+    justify-content: space-around;
+}

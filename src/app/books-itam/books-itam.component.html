@@ -1,0 +1,51 @@
+
+<!-- 
+  <div class="col-sm">
+    <div class="card mt-4" style="width: 18rem;">
+      <img class="card-img-top" [src]="book.image" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{ book.title }}</h5>
+        <p class="card-text">{{ book.author }}</p>
+        <p class="card-text">{{ book.date }}</p>
+      </div>
+      <div class="row">
+        <div class="col">
+       <button  mat-raised-button class="edit" type="button" (click)="openDialogEdit()" >
+          <img src="../../assets/images/writing.png" style="width:15px;height:15px;margin-left: 5px">
+          Edit
+        </button>
+      
+        <div class="col">
+          <button mat-raised-button class="delete" type="button" (click)="openDialogRemove(i)">Delete
+            <img src="../../assets/images/delete.png" style="width:15px;height: 15px;">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<li *ngIf="addBookItem">
+      You chose: <i>{{AddBookData}}</i>
+</li> -->
+
+
+
+ <mat-grid-list cols="3" rowHeight="2:1">
+  <mat-card class="example-card" style="width: 20rem;">
+      <img mat-card-image [src]="book.image" alt="Card image cap">
+      <mat-card-header>
+          <mat-card-title>{{ book.title }}</mat-card-title>
+          <mat-card-subtitle>{{ book.author }}</mat-card-subtitle>
+          <mat-card-subtitle>{{ book.date }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+            <button  mat-raised-button class="edit" type="button" (click)="openDialogEdit()" >
+                <img src="../../assets/images/writing.png" style="width:15px;height:15px;margin-left: 5px">
+                Edit</button>
+            <button  mat-raised-button class="delete" type="button" (click)="openDialogRemove(i)">
+                    <img src="../../assets/images/delete.png" style="width:15px;height:15px;">
+                Edit</button>
+          </mat-card-actions>
+    </mat-card>
+  </mat-grid-list> 

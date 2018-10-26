@@ -1,0 +1,37 @@
+<mat-toolbar>
+      <h1 mat-dialog-title>Add a book</h1>
+</mat-toolbar>
+<div mat-dialog-content>
+      <form [formGroup]="form">
+            <mat-grid-list class="grid-list" cols="3" rowHeight="150px">
+                  <mat-form-field class="example-full-width">
+                        <input matInput [formControl]="bookTitle" placeholder="Title">
+                        <mat-error *ngIf="bookTitle.invalid">{{getErrorMessage()}}</mat-error>
+                  </mat-form-field>
+                  <mat-form-field class="example-width">
+                        <input matInput [formControl]="bookAuthor" placeholder="Aothur">
+                        <mat-error *ngIf="bookAuthor.invalid">{{getErrorMessage()}}</mat-error>
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                        <input matInput value=[date] [matDatepicker]="picker" placeholder="Pick date">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+                  </mat-form-field>
+                  <mat-form-field class="example-width">
+                        <input matInput  [src]="bookImageUrl.imageUrl" [formControl]="bookImageUrl" placeholder="Basic Input">
+                        <mat-error *ngIf="bookImageUrl.invalid">{{getErrorMessage()}}</mat-error>
+                  </mat-form-field>
+            </mat-grid-list>
+      </form>
+</div>
+
+
+<div mat-dialog-actions>
+      <button class="confirm" type="button" [disabled]="!form.valid" color="primary" mat-raised-button (click)="onSend()">Submit
+            <img src="../../../assets/images/down-arrow.png" style="width:15px;height: 15px;">
+      </button>
+
+      <button class="delete" color="primary" mat-raised-button (click)="onNoClick()">Cancel
+            <img src="../../../assets/images/delete (1).png" style="width:15px;height: 15px;">
+      </button>
+</div>

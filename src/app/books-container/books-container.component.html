@@ -1,0 +1,7 @@
+<app-add-button (addBook)="addBookItem($event)"></app-add-button>
+
+<app-books-itam *ngFor="let book of books"
+ [book]="book" 
+ (deleteBook)="removeBook($event)"
+ [AddBookData]="AddBookData">
+</app-books-itam>

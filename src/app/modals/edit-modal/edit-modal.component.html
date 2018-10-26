@@ -1,0 +1,52 @@
+<h1 mat-dialog-title>Edit a book</h1>
+<div mat-dialog-content>
+      <form [formGroup]="form">
+            <mat-grid-list cols="3" rowHeight="150px">
+                  <mat-form-field class="example-full-width">
+                        <input matInput [formControl]="bookTitle" placeholder="Title">
+                        <mat-error *ngIf="bookTitle.invalid">{{getErrorMessage()}}</mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width">
+                        <input matInput [formControl]="bookAuthor" placeholder="Author">
+                        <mat-error *ngIf="bookTitle.invalid">{{getErrorMessage()}}</mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width">
+                        <input matInput [matDatepicker]="picker" value=[date] placeholder="Pick date">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                  <br>
+            </mat-grid-list>
+      </form>
+</div>
+<div mat-dialog-actions>
+      <button class="confirm" [disabled]="!form.valid" color="primary" mat-raised-button (click)="onSubmit()">Submit
+            <img mat-card-image src="../../../assets/images/down-arrow.png" style="width:15px;height:15px;margin-left:4px;margin-top:11px;">
+      </button>
+
+      <button class="delete" (click)="onNoClick()" color="primary" mat-raised-button>
+            <img src="../../../assets/images/delete (1).png" style="width:15px;height: 15px;">
+      </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="colcol-md-5">
+                        <label>Title</label>
+                        <input type="text" [value]="data.title" class="form-control">
+                  </div>
+                  <div class="colcol-md-5">
+                        <label>Author</label>
+                        <input type="text" [value]="data.author" class="form-control">
+                  </div><br> -->
